@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* Define feminine color scheme */
 :root {
@@ -10,11 +10,12 @@
 }
 
 /* Ensure body stretches to full viewport height */
-html, body {
+html {
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  scroll-padding-top: 100px;
 }
 
 /* Flexbox layout to make the footer stick at the bottom */
@@ -27,15 +28,14 @@ body {
 
 main {
   flex: 1;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
-/* Footer styling */
 footer {
   background-color: var(--neutral-bg);
   padding: 1.25rem;
   text-align: center;
-  margin-top: auto;
+  margin-top: 1rem; /* Adjust margin to reduce space between content and footer */
 }
 
 /* Fixed Navbar */
@@ -104,6 +104,30 @@ nav ul li a:hover {
   z-index: 1;
 }
 
+/* Arrow styling for the welcome-hero section with bounce animation */
+#bounce-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem; /* Size of the arrow */
+  color: var(--accent-color); /* Rose Gold color */
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-7px);
+  }
+}
 
 .welcome-hero:before {
   content: " ";
@@ -173,7 +197,7 @@ nav ul li a:hover {
 
 .more-about p {
   line-height: var(--line-height);
-  color: var(--secondary-color); /* Softer gray text */
+  color: var(--accent-color); /* Softer gray text */
 }
 
 /* Skills Section */
@@ -181,6 +205,7 @@ nav ul li a:hover {
   max-width: 68.75rem;
   margin: auto;
   text-align: center;
+  color: var(--accent-color);
 }
 
 .skills-wrapper img {
@@ -198,6 +223,7 @@ nav ul li a:hover {
   padding: 32px 0;
   margin-top: 2rem;
   text-align: center;
+  color: var(--accent-color);
 }
 
 .projects-container {
@@ -209,16 +235,32 @@ nav ul li a:hover {
   width: 21.875rem;
   padding: 1rem;
   text-align: center;
+  color: var(--accent-color);
+  list-style: none;
+
 }
 
 .project-pic {
   width: 65%;
   height: 60%;
 }
+/* Project Links Styling */
+.project-link {
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 700;
+  color: var(--accent-color); 
+  text-decoration: underline; 
+  margin-right: 1.5rem; 
+  transition: color 0.3s ease;
+}
 
-/* Contact Section */
+.project-link:hover {
+  color: #A05252; /* Darker rose gold on hover */
+}
+
 .contact {
-  margin-bottom: 2rem;
+  margin-top: 4rem; 
+  padding-top: 2rem;
 }
 
 /* Contact Form Container with White Box and Outline */
@@ -226,6 +268,7 @@ nav ul li a:hover {
   max-width: 40.75rem;
   margin: 0 auto 2rem auto;
   padding: 1.5rem;
+  color: var(--accent-color);
   background-color: var(--neutral-bg); /* Soft cream background */
   border: 2px solid var(--accent-color); /* Rose Gold outline */
   border-radius: 8px; /* Rounded corners */
@@ -239,7 +282,9 @@ nav ul li a:hover {
   background-color: var(--primary-color); /* Ensure inputs stay white */
   color: white; /* White text color */
 }
-
+.input-field::placeholder {
+  color: white; /* Light gray placeholder text */
+}
 .submit-btn {
   width: 100%;
   margin: 10px 4px;
