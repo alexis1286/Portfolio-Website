@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Define feminine color scheme */
+:root {
+  --text-color:white;
+  --primary-color: #FFC0CB; /* Blush Pink */
+  --accent-color: #B76E79;  /* Rose Gold */
+  --neutral-bg: #F7F1E3;    /* Soft Cream */
+  --secondary-color: #D1D1D1; /* Soft Gray */
+}
+
+/* Ensure body stretches to full viewport height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Flexbox layout to make the footer stick at the bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--neutral-bg); /* Soft cream background */
+}
+
+main {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+/* Footer styling */
+footer {
+  background-color: var(--neutral-bg);
+  padding: 1.25rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Fixed Navbar */
+nav {
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  width: 100%;
+  background-color: var(--neutral-bg);
+  padding: 1rem 0;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items:center; 
+ justify-content: space-between; 
+}
+
+nav h1 {
+  color: var(--accent-color); 
+  font-weight: 700; 
+  font-size: 24px;
+  margin-left: 2rem; 
+}
+
+nav ul {
+  display: flex;
+  gap: 1.2rem; 
+  list-style: none; 
+  padding-right: 2rem; 
+  margin: 0;
+}
+
+
+nav ul li {
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 700; 
+}
+
+nav ul li a {
+  color: var(--accent-color); 
+  text-decoration: none; 
+}
+
+nav ul li a:hover {
+  color: #A05252; 
+}
+
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: none; /* Hide for now unless adding mobile view */
+}
+
+/* Welcome Hero Section */
+.welcome-hero {
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/IMG_7621.jpg) no-repeat center center/cover;
+  height: 100vh; /* Full screen height for the hero section */
+  padding-left: 5%; /* Add some padding from the left edge */
+  position: relative;
+  z-index: 1;
+}
+
+
+.welcome-hero:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 41, 104, 0.65);
+}
+
+.header-text {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust gap between elements for better spacing */
+  color:var(--text-color); 
+  z-index: 1;
+}
+
+.header-text p {
+  font-size: 28px; /* Adjust size for better readability */
+  font-weight: 300;
+  margin-bottom: 20px; /* Space between subtitle and button */
+  color:var(--text-color); 
+}
+
+ .header-text h2 {
+  font-size: 54px;
+  font-weight: 700;
+  margin-bottom: 0;
+  color:var(--text-color); 
+}
+ /*Resume Button */
+.header-text a {
+  background-color: var(--accent-color); /* Rose Gold button */
+  display: inline-block;
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px; /* Padding for space around text */
+  width: fit-content; /* Ensure the width fits only the content */
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+  white-space: nowrap; /* Prevent text from wrapping and making the button taller */
+  z-index: 1;
+}
+
+.header-text a:hover {
+  background-color: #A05252; /* Darker rose gold on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* About Me Section */
+.more-about {
+  padding: 1rem 6rem;
+  text-align: center;
+  background-color: white; /* Keep the background clean */
+}
+
+.more-about h2 {
+  color: var(--accent-color);
+  margin-bottom: var(--bottom-margin);
+}
+
+.more-about p {
+  line-height: var(--line-height);
+  color: var(--secondary-color); /* Softer gray text */
+}
+
+/* Skills Section */
+.skills {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.icon {
+  width: 11.875rem;
+  height: 11.25rem;
+}
+
+/* Projects Section */
+.projects {
+  background-color: var(--neutral-bg);
+  padding: 32px 0;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+}
+
+.project-container {
+  width: 21.875rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-pic {
+  width: 65%;
+  height: 60%;
+}
+
+/* Contact Section */
+.contact {
+  margin-bottom: 2rem;
+}
+
+/* Contact Form Container with White Box and Outline */
+.contact-form-container {
+  max-width: 40.75rem;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem;
+  background-color: var(--neutral-bg); /* Soft cream background */
+  border: 2px solid var(--accent-color); /* Rose Gold outline */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.input-field {
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color); /* Blush Pink border for input fields */
+  font-size: 0.875rem;
+  background-color: var(--primary-color); /* Ensure inputs stay white */
+  color: white; /* White text color */
+}
+
+.submit-btn {
+  width: 100%;
+  margin: 10px 4px;
+  background-color: var(--primary-color); /* Blush Pink button */
+  border: 2px solid var(--accent-color); /* Rose Gold border */
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700; /* Bold */
+  cursor: pointer;
+  color: white; /* White text for the button */
+}
+.submit-btn:hover {
+  background-color: var(--accent-color); /* Rose Gold on hover */
+  color: white; /* Keep text white on hover */
+}
+
+/* Social icons in the footer */
+footer .socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.socicon {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 10px;
+}
+
+/* Responsive media queries */
+@media screen and (max-width: 768px) {
+  .header-text {
+    gap: 15px;
+    padding-left: 5%;
+  }
+
+  .header-text h2 {
+    font-size: 40px;
+  }
+
+  .header-text p {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .welcome-hero {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 17.875rem;
+  }
+
+  .contact-form-container {
+    max-width: 17.75rem;
+  }
+}
