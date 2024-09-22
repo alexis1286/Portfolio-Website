@@ -267,38 +267,54 @@ nav ul li a:hover {
 .contact-form-container {
   max-width: 40.75rem;
   margin: 0 auto 2rem auto;
-  padding: 1.5rem;
-  color: var(--accent-color);
-  background-color: var(--neutral-bg); /* Soft cream background */
-  border: 2px solid var(--accent-color); /* Rose Gold outline */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 2rem; /* Add padding for more space around the form */
+  background-color: var(--accent-color); /* Rose Gold background */
+  border: 2px solid var(--accent-color); /* Same border color */
+  border-radius: 10px; /* More rounded corners for a softer look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+  color: var(--primary-color);
 }
+/* Input Fields */
 .input-field {
-  width: 100%;
-  border-radius: 5px;
-  border: 2px solid var(--primary-color); /* Blush Pink border for input fields */
+  width: calc(100% - 20px); /* Align the input fields with the submit button */
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color); /* Softer border */
   font-size: 0.875rem;
-  background-color: var(--primary-color); /* Ensure inputs stay white */
-  color: white; /* White text color */
+  background-color: rgba(255, 192, 203, 0.2); /* Lighten background slightly */
+  color: #FFEBF0;
+
 }
+
 .input-field::placeholder {
-  color: white; /* Light gray placeholder text */
+  color: #FFEBF0; /* Use the accent color or any other color for the placeholder text */
 }
+
+.input-field:focus {
+  border-color: var(--primary-color); /* Change border color when focused */
+  outline: none; /* Remove default browser outline */
+}
+
+
+/* Submit Button */
 .submit-btn {
-  width: 100%;
-  margin: 10px 4px;
-  background-color: var(--primary-color); /* Blush Pink button */
+  width: calc(100% - 20px); /* Ensure alignment with input fields */
+  margin-top: 10px;
+  padding: 12px;
+  background-color: var(--primary-color); /* Blush Pink */
   border: 2px solid var(--accent-color); /* Rose Gold border */
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 1rem;
-  font-weight: 700; /* Bold */
+  font-weight: 700;
   cursor: pointer;
-  color: white; /* White text for the button */
+  color: var(--accent-color);
+  transition: background-color 0.3s, color 0.3s;
 }
+/* Submit Button Hover Effect */
 .submit-btn:hover {
-  background-color: var(--accent-color); /* Rose Gold on hover */
-  color: white; /* Keep text white on hover */
+  background-color: #FFA6B8; /* Slightly darker shade of blush pink */
+  color: #FFEBF0; /* White text on hover */
 }
 
 /* Social icons in the footer */
