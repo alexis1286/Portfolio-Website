@@ -7,28 +7,20 @@
   --accent-color: #B76E79;  /* Rose Gold */
   --neutral-bg: #F7F1E3;    /* Soft Cream */
   --secondary-color: #D1D1D1; /* Soft Gray */
+  --nav-height: 80px;
 }
-
-/* Ensure body stretches to full viewport height */
-html {
-  height: 100%;
+section {
+  scroll-margin-top: var(--nav-height);
+}
+html, body, main {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  box-sizing: border-box; /* Include padding/border in width/height */
   font-family: 'Roboto', sans-serif;
-  scroll-padding-top: 100px;
-}
-
-/* Flexbox layout to make the footer stick at the bottom */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: var(--neutral-bg); /* Soft cream background */
-}
-
-main {
-  flex: 1;
-  padding-bottom: 1rem;
+  background-color: var(--neutral-bg);
 }
 
 footer {
@@ -95,15 +87,17 @@ nav ul li a:hover {
 /* Welcome Hero Section */
 .welcome-hero {
   display: flex;
-  justify-content: flex-start; /* Align content to the left */
+  justify-content: flex-start; /* Center content horizontally */
   align-items: center;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/IMG_7621.jpg) no-repeat center center/cover;
-  height: 100vh; /* Full screen height for the hero section */
-  padding-left: 5%; /* Add some padding from the left edge */
+  background-size: cover;
+  height: 100vh; /* Full screen height */
+  padding: 5%; /* Remove all padding */
+  margin: 0; /* Ensure no margin */
+  width: 100%; /* Full width of the container, without causing scroll */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
   position: relative;
-  z-index: 1;
 }
-
 /* Arrow styling for the welcome-hero section with bounce animation */
 #bounce-arrow {
   position: absolute;
@@ -185,11 +179,12 @@ nav ul li a:hover {
 
 /* About Me Section */
 .more-about {
-  padding: 1rem 6rem;
+  padding: 2rem 0; /* Add vertical padding but no horizontal padding */
   text-align: center;
-  background-color: white; /* Keep the background clean */
+  margin: 0; /* Remove any margins */
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Ensure padding doesn't affect full width */
 }
-
 .more-about h2 {
   color: var(--accent-color);
   margin-bottom: var(--bottom-margin);
@@ -211,7 +206,9 @@ nav ul li a:hover {
 .skills-wrapper img {
   padding: 1.25rem;
 }
-
+#skills {
+  scroll-margin-top: calc(var(--nav-height) + 25px); /* Add an extra buffer if needed */
+}
 .icon {
   width: 11.875rem;
   height: 11.25rem;
@@ -267,54 +264,38 @@ nav ul li a:hover {
 .contact-form-container {
   max-width: 40.75rem;
   margin: 0 auto 2rem auto;
-  padding: 2rem; /* Add padding for more space around the form */
-  background-color: var(--accent-color); /* Rose Gold background */
-  border: 2px solid var(--accent-color); /* Same border color */
-  border-radius: 10px; /* More rounded corners for a softer look */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
-  color: var(--primary-color);
-}
-/* Input Fields */
-.input-field {
-  width: calc(100% - 20px); /* Align the input fields with the submit button */
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 2px solid var(--primary-color); /* Softer border */
-  font-size: 0.875rem;
-  background-color: rgba(255, 192, 203, 0.2); /* Lighten background slightly */
-  color: #FFEBF0;
-
-}
-
-.input-field::placeholder {
-  color: #FFEBF0; /* Use the accent color or any other color for the placeholder text */
-}
-
-.input-field:focus {
-  border-color: var(--primary-color); /* Change border color when focused */
-  outline: none; /* Remove default browser outline */
-}
-
-
-/* Submit Button */
-.submit-btn {
-  width: calc(100% - 20px); /* Ensure alignment with input fields */
-  margin-top: 10px;
-  padding: 12px;
-  background-color: var(--primary-color); /* Blush Pink */
-  border: 2px solid var(--accent-color); /* Rose Gold border */
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+  padding: 1.5rem;
   color: var(--accent-color);
-  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--neutral-bg); /* Soft cream background */
+  border: 2px solid var(--accent-color); /* Rose Gold outline */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
-/* Submit Button Hover Effect */
+.input-field {
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color); /* Blush Pink border for input fields */
+  font-size: 0.875rem;
+  background-color: var(--primary-color); /* Ensure inputs stay white */
+  color: white; /* White text color */
+}
+.input-field::placeholder {
+  color: white; /* Light gray placeholder text */
+}
+.submit-btn {
+  width: 100%;
+  margin: 10px 4px;
+  background-color: var(--primary-color); /* Blush Pink button */
+  border: 2px solid var(--accent-color); /* Rose Gold border */
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700; /* Bold */
+  cursor: pointer;
+  color: white; /* White text for the button */
+}
 .submit-btn:hover {
-  background-color: #FFA6B8; /* Slightly darker shade of blush pink */
-  color: #FFEBF0; /* White text on hover */
+  background-color: var(--accent-color); /* Rose Gold on hover */
+  color: white; /* Keep text white on hover */
 }
 
 /* Social icons in the footer */
