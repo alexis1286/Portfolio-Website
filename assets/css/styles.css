@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* Define feminine color scheme */
 :root {
   --text-color:white;
-  --primary-color: #FFC0CB; /* Blush Pink */
-  --accent-color: #B76E79;  /* Rose Gold */
-  --neutral-bg: #F7F1E3;    /* Soft Cream */
-  --secondary-color: #D1D1D1; /* Soft Gray */
+  --primary-color: #FFC0CB; 
+  --accent-color: #B76E79;  
+  --neutral-bg: #F7F1E3;    
+  --secondary-color: #D1D1D1; 
   --nav-height: 80px;
 }
 section {
@@ -18,8 +17,8 @@ html, body, main {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  box-sizing: border-box; /* Include padding/border in width/height */
+  overflow-x: hidden; 
+  box-sizing: border-box; 
   font-family: 'Roboto', sans-serif;
   background-color: var(--neutral-bg);
 }
@@ -28,10 +27,10 @@ footer {
   background-color: var(--neutral-bg);
   padding: 1.25rem;
   text-align: center;
-  margin-top: 1rem; /* Adjust margin to reduce space between content and footer */
+  margin-top: 1rem; 
 }
 
-/* Fixed Navbar */
+/*Navbar */
 nav {
   position: fixed; 
   top: 0; 
@@ -82,21 +81,21 @@ nav ul li a:hover {
   background: none;
   border: 0;
   cursor: pointer;
-  display: none; /* Hide for now unless adding mobile view */
+  display: none; 
 }
 
 /* Welcome Hero Section */
 .welcome-hero {
   display: flex;
-  justify-content: flex-start; /* Center content horizontally */
+  justify-content: flex-start; 
   align-items: center;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/IMG_7621.jpg) no-repeat center center/cover;
   background-size: cover;
-  height: 100vh; /* Full screen height */
-  padding: 5%; /* Remove all padding */
-  margin: 0; /* Ensure no margin */
-  width: 100%; /* Full width of the container, without causing scroll */
-  box-sizing: border-box; /* Include padding and border in the width calculation */
+  height: 100vh;
+  padding: 5%; 
+  margin: 0; 
+  width: 100%; 
+  box-sizing: border-box; 
   position: relative;
 }
 /* Arrow styling for the welcome-hero section with bounce animation */
@@ -105,8 +104,8 @@ nav ul li a:hover {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 3rem; /* Size of the arrow */
-  color: var(--accent-color); /* Rose Gold color */
+  font-size: 3rem; 
+  color: var(--accent-color); 
   cursor: pointer;
   animation: bounce 2s infinite;
 }
@@ -138,15 +137,15 @@ nav ul li a:hover {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Adjust gap between elements for better spacing */
+  gap: 10px; 
   color:var(--text-color); 
   z-index: 1;
 }
 
 .header-text p {
-  font-size: 28px; /* Adjust size for better readability */
+  font-size: 28px; 
   font-weight: 300;
-  margin-bottom: 20px; /* Space between subtitle and button */
+  margin-bottom: 20px; 
   color:var(--text-color); 
 }
 
@@ -158,33 +157,33 @@ nav ul li a:hover {
 }
  /*Resume Button */
 .header-text a {
-  background-color: var(--accent-color); /* Rose Gold button */
+  background-color: var(--accent-color); 
   display: inline-block;
   color: white;
   font-size: 18px;
-  padding: 12px 24px; /* Padding for space around text */
-  width: fit-content; /* Ensure the width fits only the content */
+  padding: 12px 24px; 
+  width: fit-content; 
   border-radius: 8px;
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.3s;
-  white-space: nowrap; /* Prevent text from wrapping and making the button taller */
+  white-space: nowrap; 
   z-index: 1;
 }
 
 .header-text a:hover {
-  background-color: #A05252; /* Darker rose gold on hover */
+  background-color: #A05252; 
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* About Me Section */
 .more-about {
-  padding: 2rem 1rem; /* Add vertical padding but no horizontal padding */
+  padding: 2rem 1rem; 
   text-align: center;
-  margin: 0; /* Remove any margins */
-  width: 100%; /* Ensure full width */
-  box-sizing: border-box; /* Ensure padding doesn't affect full width */
+  margin: 0; 
+  width: 100%; 
+  box-sizing: border-box; 
 }
 .more-about h2 {
   color: var(--accent-color);
@@ -193,7 +192,7 @@ nav ul li a:hover {
 
 .more-about p {
   line-height: var(--line-height);
-  color: var(--accent-color); /* Softer gray text */
+  color: var(--accent-color); 
 }
 
 /* Skills Section */
@@ -208,7 +207,7 @@ nav ul li a:hover {
   padding: 1.25rem;
 }
 #skills {
-  scroll-margin-top: calc(var(--nav-height) + 25px); /* Add an extra buffer if needed */
+  scroll-margin-top: calc(var(--nav-height) + 25px); 
 }
 .icon {
   width: 11.875rem;
@@ -242,6 +241,7 @@ nav ul li a:hover {
   width: 65%;
   height: 60%;
 }
+
 /* Project Links Styling */
 .project-link {
   font-family: 'Roboto', sans-serif; 
@@ -253,7 +253,7 @@ nav ul li a:hover {
 }
 
 .project-link:hover {
-  color: #A05252; /* Darker rose gold on hover */
+  color: #A05252; 
 }
 
 .contact {
@@ -273,36 +273,35 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 .input-field {
-  width: calc(100% - 20px); /* Align the input fields with the submit button */
+  width: calc(100% - 20px); 
   padding: 12px;
   margin-bottom: 15px;
   border-radius: 8px;
-  border: 2px solid var(--primary-color); /* Softer border */
+  border: 2px solid var(--primary-color); 
   font-size: 0.875rem;
-  background-color: rgba(255, 192, 203, 0.2); /* Lighten background slightly */
-  color: var(--accent-color);
+  background-color: rgba(255, 192, 203, 0.2); 
 }
 .input-field::placeholder {
-  color: #FFEBF0;  /* Light gray placeholder text */
+  color: #FFEBF0;  
 }
 
 .input-field:focus {
-  border-color: var(--primary-color); /* Change border color when focused */
-  outline: none; /* Remove default browser outline */
+  border-color: var(--primary-color); 
+  outline: none; 
   color: #FFEBF0;
 }
 
 /* Remove the black border from the message box */
 textarea.input-field {
-  border: 2px solid var(--primary-color);  /* Use accent color for border */
+  border: 2px solid var(--primary-color);  
 }
 
 .submit-btn {
-  width: 100%; /* Ensure the submit button is the same width as input fields */
+  width: 100%; 
   margin-top: 10px;
   padding: 12px;
-  background-color: var(--primary-color); /* Blush Pink */
-  border: 2px solid var(--accent-color); /* Rose Gold border */
+  background-color: var(--primary-color); 
+  border: 2px solid var(--accent-color); 
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 700;
@@ -312,8 +311,8 @@ textarea.input-field {
 }
 
 .submit-btn:hover {
-  background-color: #FFA6B8; /* Slightly darker shade of blush pink */
-  color: white; /* White text on hover */
+  background-color: #FFA6B8; 
+  color: white; 
 }
 /* Social icons in the footer */
 footer .socials {
