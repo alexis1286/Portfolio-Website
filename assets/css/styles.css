@@ -11,6 +11,7 @@
 }
 section {
   scroll-margin-top: var(--nav-height);
+  display: block;
 }
 html, body, main {
   margin: 0;
@@ -179,7 +180,7 @@ nav ul li a:hover {
 
 /* About Me Section */
 .more-about {
-  padding: 2rem 0; /* Add vertical padding but no horizontal padding */
+  padding: 2rem 1rem; /* Add vertical padding but no horizontal padding */
   text-align: center;
   margin: 0; /* Remove any margins */
   width: 100%; /* Ensure full width */
@@ -263,41 +264,57 @@ nav ul li a:hover {
 /* Contact Form Container with White Box and Outline */
 .contact-form-container {
   max-width: 40.75rem;
-  margin: 0 auto 2rem auto;
-  padding: 1.5rem;
-  color: var(--accent-color);
-  background-color: var(--neutral-bg); /* Soft cream background */
-  border: 2px solid var(--accent-color); /* Rose Gold outline */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: var(--accent-color);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  color: var(--primary-color);
+  margin: 0px auto 2rem;
+  padding: 2rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
 }
 .input-field {
-  width: 100%;
-  border-radius: 5px;
-  border: 2px solid var(--primary-color); /* Blush Pink border for input fields */
+  width: calc(100% - 20px); /* Align the input fields with the submit button */
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color); /* Softer border */
   font-size: 0.875rem;
-  background-color: var(--primary-color); /* Ensure inputs stay white */
-  color: white; /* White text color */
+  background-color: rgba(255, 192, 203, 0.2); /* Lighten background slightly */
+  color: var(--accent-color);
 }
 .input-field::placeholder {
-  color: white; /* Light gray placeholder text */
-}
-.submit-btn {
-  width: 100%;
-  margin: 10px 4px;
-  background-color: var(--primary-color); /* Blush Pink button */
-  border: 2px solid var(--accent-color); /* Rose Gold border */
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 700; /* Bold */
-  cursor: pointer;
-  color: white; /* White text for the button */
-}
-.submit-btn:hover {
-  background-color: var(--accent-color); /* Rose Gold on hover */
-  color: white; /* Keep text white on hover */
+  color: #FFEBF0;  /* Light gray placeholder text */
 }
 
+.input-field:focus {
+  border-color: var(--primary-color); /* Change border color when focused */
+  outline: none; /* Remove default browser outline */
+  color: #FFEBF0;
+}
+
+/* Remove the black border from the message box */
+textarea.input-field {
+  border: 2px solid var(--primary-color);  /* Use accent color for border */
+}
+
+.submit-btn {
+  width: 100%; /* Ensure the submit button is the same width as input fields */
+  margin-top: 10px;
+  padding: 12px;
+  background-color: var(--primary-color); /* Blush Pink */
+  border: 2px solid var(--accent-color); /* Rose Gold border */
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--accent-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #FFA6B8; /* Slightly darker shade of blush pink */
+  color: white; /* White text on hover */
+}
 /* Social icons in the footer */
 footer .socials {
   display: flex;
